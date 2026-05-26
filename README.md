@@ -13,7 +13,8 @@ Dashboard corporativo desenvolvido com HTML e CSS, com foco em visual profission
 - Layout responsivo
 
 ## 📸 Preview
-Adicione uma imagem ou GIF do projeto aqui.
+<img width="auto" height="auto" alt="{5DDD2185-0246-4D0B-9BE8-B39B5F3717C2}" src="https://github.com/user-attachments/assets/b72b492a-a5c3-4170-bc31-b79ddf996962" />
+
 
 ## 🔗 Deploy
 https://diovannymartins.github.io/business-dashboard/
