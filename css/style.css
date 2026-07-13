@@ -619,6 +619,8 @@ tr:hover td {
 .menu-overlay,
 .menu-btn {
   display: none;
+  background-color: var(--bg-main);
+  border: 0px;
 }
 
 body.menu-aberto {
