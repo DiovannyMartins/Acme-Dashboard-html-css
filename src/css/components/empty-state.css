@@ -1,0 +1,29 @@
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2.5rem 1.25rem;
+  text-align: center;
+  border: 1px dashed var(--border-subtle);
+  border-radius: 0.5rem;
+  background-color: rgba(255, 255, 255, 0.005);
+}
+
+.empty-state__icon {
+  color: var(--text-muted);
+  margin-bottom: 0.75rem;
+}
+
+.empty-state__title {
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-bottom: 0.25rem;
+}
+
+.empty-state__desc {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  max-width: 12.5rem;
+  margin-bottom: var(--space-md);
+}

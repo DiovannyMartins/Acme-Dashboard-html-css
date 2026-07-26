@@ -1,0 +1,101 @@
+.chart-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.chart-card .card__header {
+  margin-bottom: 0;
+}
+
+.chart-card .card__header > div > h2 {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.chart-card .card__header > div > p {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.chart__container {
+  height: 12.5rem;
+  display: flex;
+  align-items: flex-end;
+  gap: 0.75rem;
+  padding-top: var(--space-lg);
+  position: relative;
+}
+
+.chart__grid-line {
+  position: absolute;
+  left: 0;
+  right: 0;
+  border-bottom: 1px dashed var(--border-subtle);
+  pointer-events: none;
+}
+
+.chart__grid-line--1 { bottom: 3.125rem; }
+.chart__grid-line--2 { bottom: 6.25rem; }
+.chart__grid-line--3 { bottom: 9.375rem; }
+
+.chart__bar-wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  justify-content: flex-end;
+  position: relative;
+}
+
+.chart__bar {
+  width: 100%;
+  background: linear-gradient(
+    to top,
+    rgba(99, 102, 241, 0.05),
+    rgba(99, 102, 241, 0.3)
+  );
+  border-top: 2px solid var(--accent);
+  border-radius: 0.25rem 0.25rem 0 0;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  position: relative;
+}
+
+.chart__bar:hover {
+  background: linear-gradient(
+    to top,
+    rgba(99, 102, 241, 0.2),
+    rgba(99, 102, 241, 0.6)
+  );
+  box-shadow: 0 0 0.9375rem rgba(99, 102, 241, 0.3);
+}
+
+.chart__tooltip {
+  position: absolute;
+  top: -2.1875rem;
+  background-color: var(--bg-main);
+  border: 1px solid var(--border-glow);
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  font-size: 0.75rem;
+  opacity: 0;
+  transform: translateY(0.3125rem);
+  transition: var(--transition-smooth);
+  pointer-events: none;
+  white-space: nowrap;
+  z-index: 10;
+}
+
+.chart__bar-wrapper:hover .chart__tooltip {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.chart__label {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  margin-top: 0.5rem;
+}

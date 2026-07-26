@@ -1,0 +1,49 @@
+.table-card {
+  overflow: hidden;
+}
+
+.table-card > .card__title {
+  padding: 0 var(--space-md);
+}
+
+.table__wrapper {
+  overflow-x: auto;
+}
+
+.table__wrapper table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 0.875rem;
+}
+
+.table__wrapper th {
+  color: var(--text-muted);
+  font-weight: 500;
+  padding: 0.75rem var(--space-md);
+  border-bottom: 1px solid var(--border-subtle);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.table__wrapper td {
+  padding: var(--space-md);
+  border-bottom: 1px solid var(--border-subtle);
+  color: var(--text-secondary);
+}
+
+.table__client {
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.table__transaction-id {
+  font-family: monospace;
+  font-size: 0.8rem;
+}
+
+.table__wrapper tr:hover td {
+  background-color: rgba(255, 255, 255, 0.01);
+  color: var(--text-primary);
+}

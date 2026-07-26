@@ -1,0 +1,9 @@
+.menu-overlay {
+  display: none;
+  background-color: var(--bg-main);
+  border: 0;
+}
+
+body.menu--open {
+  overflow: hidden;
+}

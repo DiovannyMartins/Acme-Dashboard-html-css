@@ -1,0 +1,21 @@
+.main-content {
+  margin-left: 15rem;
+  width: calc(100% - 15rem);
+  min-height: 100vh;
+  padding: var(--space-2xl);
+  transition: var(--transition-smooth);
+}
+
+.main-content__analytics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  gap: var(--space-md);
+  margin-bottom: var(--space-lg);
+}
+
+.main-content__section-split {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: var(--space-md);
+  margin-bottom: var(--space-lg);
+}
