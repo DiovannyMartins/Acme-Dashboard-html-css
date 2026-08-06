@@ -107,9 +107,13 @@ export function initWebhookModal() {
       return;
     }
 
-    alert("Webhook configurado com sucesso! (simulação)");
+    const msg = document.createElement("div");
+    msg.className = "form-success";
+    msg.textContent = "Webhook configurado com sucesso!";
+    form.appendChild(msg);
     form.reset();
     clearErrors();
+    setTimeout(() => msg.remove(), 1500);
     close();
   });
 }

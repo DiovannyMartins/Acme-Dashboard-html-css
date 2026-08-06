@@ -2,7 +2,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
 }
 
@@ -12,6 +11,12 @@ body {
   overflow-x: hidden;
   display: flex;
   line-height: 1.5;
+  font-family: var(--font-sans);
+}
+
+button, input, select, textarea {
+  font-family: inherit;
+  font-size: inherit;
 }
 
 ::-webkit-scrollbar {

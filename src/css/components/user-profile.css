@@ -3,8 +3,13 @@
   align-items: center;
   gap: 0.75rem;
   padding-top: var(--space-md);
+  border: none;
   border-top: 1px solid var(--border-subtle);
+  background: none;
+  color: inherit;
   cursor: pointer;
+  width: 100%;
+  text-align: left;
 }
 
 .user-profile__avatar {

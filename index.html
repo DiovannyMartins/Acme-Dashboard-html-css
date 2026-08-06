@@ -16,6 +16,9 @@
   <meta property="og:url" content="https://diovannymartins.github.io/business-dashboard/" />
   <meta property="og:locale" content="pt_BR" />
   <meta property="og:site_name" content="Acme Dashboard" />
+  <meta property="og:image" content="https://diovannymartins.github.io/business-dashboard/preview.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
 
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Acme Dashboard - Premium SaaS" />
@@ -48,7 +51,7 @@
           Dashboard
         </a>
 
-        <a href="#" class="sidebar__nav-link">
+        <a href="#" class="sidebar__nav-link" aria-disabled="true" tabindex="-1">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
             aria-hidden="true">
             <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
@@ -59,7 +62,7 @@
           Clientes
         </a>
 
-        <a href="#" class="sidebar__nav-link">
+        <a href="#" class="sidebar__nav-link" aria-disabled="true" tabindex="-1">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
             aria-hidden="true">
             <line x1="12" y1="1" x2="12" y2="23" />
@@ -68,7 +71,7 @@
           Faturamento
         </a>
 
-        <a href="#" class="sidebar__nav-link">
+        <a href="#" class="sidebar__nav-link" aria-disabled="true" tabindex="-1">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
             aria-hidden="true">
             <circle cx="12" cy="12" r="10" />
@@ -81,7 +84,7 @@
     </div>
 
     <div class="user-profile-wrapper">
-      <div class="user-profile" id="userProfile" role="button" tabindex="0" aria-haspopup="true"
+      <button class="user-profile" id="userProfile" aria-haspopup="true"
         aria-expanded="false" aria-label="Menu do usuário, Diovanny F.">
         <div class="user-profile__avatar" aria-hidden="true"></div>
         <div class="user-profile__info">
@@ -92,7 +95,7 @@
           aria-hidden="true">
           <path d="m6 9 6 6 6-6" />
         </svg>
-      </div>
+      </button>
 
       <div class="dropdown dropdown--user" id="userDropdown" role="menu" aria-label="Opções do usuário">
         <button type="button" class="dropdown__option" role="menuitem">Perfil</button>
@@ -115,7 +118,7 @@
       </button>
 
       <div class="topbar__workspace-wrapper">
-        <div class="topbar__workspace-selector" id="workspaceSelector" role="button" tabindex="0"
+        <button class="topbar__workspace-selector" id="workspaceSelector"
           aria-haspopup="listbox" aria-expanded="false" aria-label="Selecionar workspace">
           <div class="sidebar__workspace-avatar" aria-hidden="true"></div>
           <span class="topbar__workspace-name">Produção / Vercel API</span>
@@ -123,7 +126,7 @@
             aria-hidden="true">
             <path d="m6 9 6 6 6-6" />
           </svg>
-        </div>
+        </button>
 
         <div class="dropdown dropdown--workspace" id="workspaceDropdown" role="listbox"
           aria-label="Workspaces disponíveis">
@@ -186,7 +189,7 @@
           </div>
         </div>
 
-        <div class="chart__container" id="chart" role="img" aria-label="Gráfico de barras com volume de requisições da semana">
+        <div class="chart__container" id="chart" aria-label="Gráfico de barras com volume de requisições da semana">
           <div class="chart__grid-line chart__grid-line--1" aria-hidden="true"></div>
           <div class="chart__grid-line chart__grid-line--2" aria-hidden="true"></div>
           <div class="chart__grid-line chart__grid-line--3" aria-hidden="true"></div>

@@ -12,7 +12,7 @@ Dashboard SaaS premium desenvolvido com HTML, CSS e JavaScript puro, focado em p
 - Zero dependências
 - Mobile First
 - Acessível (ARIA, skip link, focus visible)
-- SEO otimizado (Open Graph, sitemap, robots.txt)
+- SEO otimizado (Open Graph, heading hierarchy)
 - CSS modular com BEM
 
 ---
@@ -43,8 +43,8 @@ O projeto foi desenvolvido com foco em simplicidade, desempenho e facilidade de 
 - **BEM (Block Element Modifier)**: nomenclatura consistente em todo o CSS e HTML (`.card__header`, `.badge--success`).
 - **JavaScript em ES Modules**: cada funcionalidade (menu, busca, gráfico, faturas, feed, dropdowns, modal) vive em seu próprio módulo. O `app.js` apenas inicializa — sem acoplamento.
 - **Acessibilidade como requisito**: skip link, ARIA labels, `aria-live` no feed, `aria-expanded` nos dropdowns, focus trap no modal, navegação por teclado (Tab, Enter, Escape), focus visible customizado.
-- **Performance**: `DocumentFragment` para inserções em lote, debounce em eventos, `localStorage` com try/catch.
-- **SEO**: `sitemap.xml`, `robots.txt`, Open Graph, Twitter Card, favicon SVG inline, heading hierarchy correta.
+- **Performance**: `DocumentFragment` para inserções em lote, `localStorage` com try/catch.
+- **SEO**: Open Graph, Twitter Card, favicon SVG inline, heading hierarchy correta.
 
 ---
 
@@ -127,16 +127,13 @@ business-dashboard/
 │   │   │   ├── webhookModal.js    # Modal com validação e focus trap
 │   │   │   └── footerYear.js      # Ano dinâmico no footer
 │   │   ├── utils/
-│   │   │   ├── debounce.js        # Debounce para eventos
 │   │   │   ├── dom.js             # Helpers de DOM ($, $$, safeOn)
+│   │   │   ├── escapeHtml.js      # Escape HTML para segurança XSS
 │   │   │   ├── formatters.js      # Formatação de moeda
 │   │   │   └── storage.js         # Wrapper para localStorage
 │   │   └── app.js                 # Entry point (inicializa módulos)
-│   └── assets/
-│       └── img/                   # Imagens e ícones
 ├── index.html                     # Página principal
-├── robots.txt                     # Diretrizes para crawlers
-├── sitemap.xml                    # Mapa do site para SEO
+├── preview.png                    # Imagem de preview para redes sociais
 └── README.md
 ```
 
@@ -148,33 +145,9 @@ business-dashboard/
 - **Organização de código** — separação em módulos ES6, cada funcionalidade isolada e independente
 - **CSS modular com BEM** — nomenclatura consistente, sem especificidade excessiva, sem `!important`
 - **Acessibilidade** — ARIA labels, focus trap em modais, navegação por teclado, skip link, `aria-live`
-- **Performance** — `DocumentFragment`, debounce, `localStorage` com try/catch
+- **Performance** — `DocumentFragment`, `localStorage` com try/catch
 - **Validação de formulário** — feedback visual em tempo real com mensagens claras
-- **SEO** — Open Graph, Twitter Card, sitemap, robots.txt, heading hierarchy
-
----
-
-## Testes
-
-Este projeto não possui suite de testes automatizados no momento. A validação é feita manualmente:
-
-- Teste de responsividade (Chrome DevTools: mobile, tablet, desktop)
-- Navegação por teclado (Tab, Enter, Escape)
-- Validação de formulário (URL vazia, URL inválida)
-- Focus trap no modal de webhook
-- Dropdowns (abrir, fechar, selecionar opção)
-- Persistência de faturas no localStorage
-
----
-
-## Roadmap / Melhorias futuras
-
-- Migrar para um gerador estático (Astro ou 11ty) para otimizar build
-- Adicionar testes E2E com Playwright
-- Implementar modo claro/escuro com persistência
-- Adicionar gráficos interativos com Canvas ou SVG
-- Integrar com API real para dados em tempo real
-- Adicionar métricas de performance (Lighthouse CI)
+- **SEO** — Open Graph, Twitter Card, heading hierarchy
 
 ---
 

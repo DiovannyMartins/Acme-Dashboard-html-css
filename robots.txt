@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://diovannymartins.github.io/business-dashboard/sitemap.xml

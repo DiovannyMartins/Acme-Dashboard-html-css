@@ -2,8 +2,8 @@ export function $(selector) {
   return document.querySelector(selector);
 }
 
-export function $$(selector) {
-  return document.querySelectorAll(selector);
+export function $$(selector, scope = document) {
+  return scope.querySelectorAll(selector);
 }
 
 export function safeOn(element, event, handler) {
